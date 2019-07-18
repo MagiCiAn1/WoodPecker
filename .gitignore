@@ -1,0 +1,5 @@
+WoodPecker.zip
+venv
+db.sqlite3
+*.pyc
+.idea

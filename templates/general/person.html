@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="bookmark" href="/favicon.ico">
+    <title>WoodPecker移动安全威胁数据平台</title>
+    <link href="/static/css/home.css" rel="stylesheet">
+    <link href="/static/css/common.css" rel="stylesheet">
+    <link href="/static/css/cover.css" rel="stylesheet">
+    <script src="/static/js/dropzone.js"></script>
+    <script src="/static/js/jquery-1.8.3.js"></script>
+    <script src="/static/js/jquery.form.js"></script>
+    <script src="/static/js/jquery.redirect.js"></script>
+    <link rel="stylesheet" href="/static/css/dropzone.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        .upload {
+            position: fixed;
+            top: 120px;
+            left: 10%;
+            width: 80%;
+        }
+
+        body {
+            font: 14px/1.7 PingFangSC-Light, lucida grande, lucida sans unicode, lucida, helvetica, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, "sans-serif";
+            color: #363d4c;
+            display: none;
+            min-width: 1200px;
+            background: #00112c;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        li {
+            list-style: none
+        }
+
+        button, input, select, textarea {
+            outline: none;
+            font: inherit
+        }
+
+        button {
+            border: none
+        }
+
+        dd {
+            margin: 0
+        }
+
+        .top {
+            height: 60px;
+            background: #071724;
+            min-width: 1200px;
+            color: #fff;
+            font-size: 14px;
+            box-shadow: 0 1px 1px #d6d6d6
+        }
+
+        .top .header {
+            position: relative;
+            width: 1030px;
+            padding-left: 170px;
+            margin: 0 auto
+        }
+
+        .top .header .logo {
+            position: absolute;
+            top: 7px;
+            left: 0
+        }
+
+        .top .header .logo img {
+            vertical-align: middle
+        }
+
+        .top .header .logo_desc {
+            position: absolute;
+            top: 0;
+            left: 240px;
+            font-size: 18px;
+            color: #04adff
+        }
+
+        .top .header .search-input-txt {
+            position: absolute;
+            top: 47px;
+            left: 660px;
+            width: 340px;
+            z-index: 100;
+            background: #fff;
+            color: #212121;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            box-shadow: 0 1px 15px rgba(18, 21, 21, .2)
+        }
+
+        .top .header .search-input-txt ul li:hover {
+            background: #e3f2fd
+        }
+
+        .top .header .search-input {
+            float: left;
+            height: 32px;
+            line-height: 32px;
+            border: 0;
+            background: #262d3b;
+            border-radius: 2px;
+            width: 340px;
+            text-indent: 15px;
+            margin-top: 15px;
+            color: #fff
+        }
+
+        .top .header .menu-v2 {
+            line-height: 60px;
+            margin: 0 auto
+        }
+
+        .top .header .menu-v2 .icon {
+            font-size: 25px
+        }
+
+        .top .header .menu-v2 a {
+            height: 60px;
+            display: inline-block;
+            position: relative;
+            float: left;
+            width: 94px;
+            text-align: center;
+            color: #9fb1c7;
+            letter-spacing: 0
+        }
+
+        .top .header .menu-v2 a span {
+            position: absolute;
+            line-height: 30px;
+            left: 0;
+            text-align: center;
+            width: 80px;
+            top: 40px;
+            font-size: 14px;
+            color: #212121;
+            display: none
+        }
+
+        .top .header .menu-v2 a:hover {
+            color: #fff;
+            background: #000
+        }
+
+        .top .header .menu-v2 a:hover span {
+            color: #efefef
+        }
+
+        .top .header .menu-v2 a.active {
+            color: #fff;
+            background: #000
+        }
+
+        .top .header .menu-v2 a.active span {
+            color: #efefef
+        }
+
+        .top .header .menu-v2 a.active:hover {
+            color: #fff
+        }
+
+        .top .header .menu-v2 a.active:hover span {
+            color: #efefef
+        }
+
+        .top .header .menu-v2 .fs-22 {
+            font-size: 22px
+        }
+
+        .top .header .menu-v2 .fs-24 {
+            font-size: 24px
+        }
+
+        .top .header .menu-v2 .fs-28 {
+            font-size: 28px
+        }
+
+        .top .header .menu-center {
+            position: absolute;
+            top: 18px;
+            right: 140px;
+        }
+
+        .top .header .menu-right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 12px;
+            height: 50px;
+        }
+
+        .top .header .menu-right .user-info img {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            vertical-align: middle;
+            border: 2px solid #79889a;
+        }
+
+        .top .header .menu a {
+            color: #2f2f2f;
+            text-decoration: none
+        }
+
+        .top .header .menu a:hover {
+            color: #42cfff
+        }
+
+        .top .header .out-ul {
+            height: 30px;
+            margin-top: 15px
+        }
+
+        .top .header .out-ul .out-li {
+            float: left;
+            padding: 0 20px;
+            text-align: center;
+            cursor: pointer;
+            height: 30px;
+            line-height: 30px;
+            position: relative
+        }
+
+        .top .header .out-ul .out-li.right2 {
+            z-index: 6
+        }
+
+        .top .header .out-ul .out-li.right1 {
+            padding-top: 2px
+        }
+
+        .top .header .out-ul .out-li .iconfont {
+            color: #79889a
+        }
+
+        .top .header .out-ul .out-li .down-arry {
+            font-size: 14px;
+            color: #757575;
+            margin-left: 4px;
+            position: relative;
+            top: -2px
+        }
+
+        .top .header .out-ul .out-li.active a {
+            color: #1976d2
+        }
+
+        .top .header .out-ul .out-li .menu-item-box {
+            display: none;
+            position: absolute;
+            width: 90px;
+            z-index: 5;
+            background-color: #071724;
+            box-shadow: 0 1px 15px rgba(18, 21, 21, .2);
+            padding: 10px 0;
+            top: 40px;
+            left: 0
+        }
+
+        .top .header .out-ul .out-li .menu-item-box li {
+            text-align: center
+        }
+
+        .top .header .out-ul .out-li .menu-item-box li:hover {
+            background-color: none
+        }
+
+        .top .header .out-ul .out-li .menu-item-box li a {
+            color: #757575;
+            padding: 0;
+            height: 36px;
+            width: 90px;
+            text-align: center;
+            line-height: 36px;
+            display: block;
+        }
+
+        .main-bg-bottom {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
+            background: url('/static/images/bg-bottom.png') bottom no-repeat;
+            z-index: -1;
+        }
+
+        .main-bg-top {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            background: #00112c url(/static/images/bg-top.png) top no-repeat;
+            z-index: -2;
+        }
+        .hint{
+            margin-left: 42%;
+            color: #9f191f;
+        }
+    </style>
+</head>
+<body style="display: block;">
+<div>
+    <div class="top home-header" _v-0d298431="" _v-0bee7c14="">
+        <div class="header" _v-0d298431="">
+            <div class="logo" _v-0d298431=""><a href="home.html" _v-0d298431=""><img
+                    src="/static/img/WoodPecker.png"height="41" _v-0d298431=""></a></div>
+            <div class="menu-v2 c-f" id="menu-v2" _v-0d298431="">
+                <a href="/history" class="" _v-0d298431="">最近扫描</a>
+
+                <a href="https://open.appscan.io/" target="_blank" _v-0d298431="">资讯</a>
+                <a href="my-list.html" class="" _v-0d298431="">关于</a>
+            </div>
+            <div class="menu-center">
+                <form action="/search" method="GET">
+                    <input name="md5" type="text" id="search" class="form-control" placeholder="Search MD5">
+                </form>
+            </div>
+            <div class="menu-right" _v-0d298431="">
+                <ul class="out-ul right-ul" _v-0d298431="">
+                    <li class="out-li right3" _v-0d298431="">
+                        <a href="javascript:void(0)" onclick="detail()" class="db" _v-0d298431="">
+                        <span class="user-info" _v-0d298431="">
+                            <img onerror="this.src='../static/images/user.jpg'" _v-0d298431=""
+                                 src="http://pgicons.cn-bj.ufileos.com/img_avatar/1492766431a63448bed7903b35374760823b1a2c4642a2f2d6.jpg">
+                        </span>
+                            {{ username }}
+                        </a>
+                        <ul class="menu-item-box right" id="navitem-right3" _v-0d298431="" style="display: none;">
+                            <li _v-0d298431=""><a _v-0d298431="" href="users.html?id=F8EDD47981E6437EA7FFEA8FE485B90F">我的主页</a>
+                            </li>
+                            <li _v-0d298431=""><a href="user.html#info" _v-0d298431="">账户信息</a> <a href="user.html#info"
+                                                                                                   _v-0d298431=""
+                                                                                                   style="display: none;">账户信息</a>
+                            </li>
+                            <li class="pr" _v-0d298431=""><a href="user.html#notify" _v-0d298431="">通知中心</a> <a
+                                    href="user.html#notify" _v-0d298431="" style="display: none;">通知中心</a> <span
+                                    class="notify_point" _v-0d298431="" style="display: none;"></span></li>
+                            <li _v-0d298431=""><a href="user.html#log" _v-0d298431="">操作记录</a> <a href="user.html#log"
+                                                                                                  _v-0d298431=""
+                                                                                                  style="display: none;">操作记录</a>
+                            </li>
+                            <li _v-0d298431=""><a href="feedback.html" _v-0d298431="">问题反馈</a></li>
+                            <li _v-0d298431=""><a href="javascript:void(0)" _v-0d298431="">退出登录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-bg-bottom"></div>
+    <div class="main-bg-top"></div>
+    <div class="cover upload">
+        <div class="main-tit" _v-0bee7c14="">移动安全威胁数据平台</div>
+        <form id="upload-widget" method="POST" action="/upload/" class="dropzone" style="height: 180px;">
+            {% csrf_token %}
+        </form>
+
+
+        <div class="inner cover">
+        </div>
+        </br>
+
+        <form id="upload_form" enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            <div class="fileUpload btn btn-default btn-lg" id="but">
+                <input type="file" name="file" id="uploadFile" placeholder="Choose File">
+                Upload &amp; Analyze
+            </div>
+            <h4 id="status" class="hint"></h4>
+            <progress id="progressBar" value="0" max="100" style="width:300px;visibility:hidden;"></progress>
+
+        </form>
+    </div>
+
+{##}
+{#    <div class="mastfoot">#}
+{##}
+{##}
+{#        <div class="inner">#}
+{#            <h5><strong><a href="/recent_scans/">Recent Scans</a> | <a href="api_docs">API Docs</a> | <a#}
+{#                    href="about">About</a></strong></h5></br>#}
+{#            <p>&copy; {% now "Y" %} WoodPecker {{ version }}. All Rights Reserved</p>#}
+{#        </div>#}
+{#    </div>#}
+    <script type="text/javascript">
+        function createAjax() {
+            var ajax;
+            if (window.ActiveXObject) {
+                ajax = new ActiveXObject("Microsoft.XMLHTTP");
+            } else if (window.XMLHttpRequest) {
+                ajax = new XMLHttpRequest();
+            }
+            return ajax;
+        }
+
+        function _(el) {
+            return document.getElementById(el);
+        }
+
+        function responseHandler(json, isbutton) {
+
+            if (json.status === 'error') {
+                _("status").innerHTML = json.description;
+            } else if (json.status === 'success') {
+                i = 1;
+                setInterval(function () {
+                    dot = '';
+                    for (x = 1; x <= i; x++) {
+                        dot += '.';
+                    }
+                    _("status").innerHTML = "Analyzing" + dot;
+                    i += 1;
+                    if (i == 5) {
+                        i = 1;
+                    }
+                }, 2000);
+                alert(json.data.name);
+                $.redirect(json.url, {
+                    "name": json.data.name,
+                    "csrfmiddlewaretoken": '{{ csrf_token }}'
+                }, "POST", {"X-CSRFToken": '{{ csrf_token }}'});
+                {#window.location.href=window.location.href+json.url;#}
+            }
+        }
+
+        Dropzone.options.uploadWidget = {
+            paramName: 'file',
+            createImageThumbnails: false,
+            maxFilesize: 256, // MB
+            maxFiles: 8,
+            dictDefaultMessage: 'Drag files here or click Upload & Analyze',
+            acceptedFiles: '.apk,.ipa',
+
+            init: function () {
+                this.on('success', function (file, resp) {
+                    //console.log( file );
+                    console.log(resp);
+                    responseHandler(resp);
+                });
+            },
+
+        };
+
+        function detail() {
+            $('#navitem-right3').toggle();
+        }
+
+        $(document).ready(function () {
+            $('input[type=file]').change(function () {
+                var val = $(this).val().toLowerCase();
+                var regex = new RegExp("(.*?)\.(ipa|apk)$");
+                val = val.replace(/^.*[\\\/]/, '');
+                try {
+                    if (!(regex.test(val))) {
+                        $(this).val('');
+                        _('status').innerHTML = "Please upload APK/IPA only!";
+                    } else {
+                        _('status').innerHTML = "";
+                        if (_("uploadFile").files.length === 0) {
+                            return;
+                        }
+                        _("uploadFile").style.display = "none";
+                        _("but").style.display = "none";
+                        var file = _("uploadFile").files[0];
+                        _("progressBar").style.visibility = "visible";
+
+
+                        var formdata = new FormData();
+                        formdata.append("file", file);
+                        var ajax = createAjax();
+
+                        ajax.upload.addEventListener("progress", progressHandler, false);
+                        ajax.addEventListener("load", completeHandler, false);
+                        ajax.addEventListener("error", errorHandler, false);
+                        ajax.addEventListener("abort", abortHandler, false);
+                        ajax.open("POST", "../upload/");
+                        ajax.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
+                        ajax.send(formdata);
+                    }
+
+                } catch (e) {
+                    alert("Error:" + e);
+                }
+            });
+            $("input[type='text']").on('input', function () {
+                var val = $(this).val().toLowerCase();
+                if (val.length === 32) {
+                    var ajax = createAjax();
+                    ajax.addEventListener("load", completeHandler, false);
+                    ajax.open("GET", "../search/?md5=" + val);
+                    ajax.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
+                    ajax.send(null);
+                }
+            });
+        });
+
+        function progressHandler(event) {
+            var percent = (event.loaded / event.total) * 100;
+            console.log("Uploaded..." + Math.round(percent));
+            _("progressBar").value = Math.round(percent);
+            _("status").innerHTML = Math.round(percent) + "% Uploaded...";
+        }
+
+        function completeHandler(event) {
+
+            var json = JSON.parse(event.target.responseText);
+            responseHandler(json);
+        }
+
+        function errorHandler(event) {
+            _("status").innerHTML = "Upload Failed!";
+        }
+
+        function abortHandler(event) {
+            _("status").innerHTML = "Upload Aborted!";
+        }
+    </script>
+</div>
+</body>
+</html>

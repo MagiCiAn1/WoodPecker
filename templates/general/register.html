@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta content="telephone=no" name=format-detection/>
+    <meta content="email=no" name=format-detection/>
+    <title>注册</title>
+    <link href="/static/css/register.css" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font: 14px/1.7 PingFangSC-Light, lucida grande, lucida sans unicode, lucida, helvetica, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, "sans-serif";
+            color: #363d4c;
+            display: none;
+            min-width: 1200px
+        }
+
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        li {
+            list-style: none
+        }
+
+        button, input, select, textarea {
+            outline: none;
+            font: inherit
+        }
+
+        button {
+            border: none
+        }
+
+        dd {
+            margin: 0
+        }
+
+        .auto {
+            margin: 0 auto
+        }
+
+        .ovyau {
+            overflow-y: auto
+        }
+
+        .ell {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden
+        }
+
+        .btn-s {
+            padding: 3px 25px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer
+        }
+
+        .btn-s:hover {
+            background: #1976d2
+        }
+
+        .btn-grey {
+            border: 1px solid #999;
+            background: none;
+            color: #999
+        }
+
+        .btn-grey:hover {
+            border: 1px solid #1976d2;
+            color: #1976d2;
+            background: none
+        }
+
+        .btn-default {
+            background: #fff;
+            color: #616773
+        }
+
+        .btn-default:hover {
+            background: #fff;
+            color: #1976d2
+        }
+
+        .btn-info {
+            background: #1976d2;
+            color: #fff
+        }
+
+        .btn-main-green, .btn-main-green:hover {
+            background-color: #1976d2
+        }
+
+        .btn-black {
+            padding: 0;
+            width: 70px;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;
+            font-size: 14px
+        }
+
+        .btn-black, .btn-black:hover {
+            background: #515151;
+            color: #fff
+        }
+
+        .btn-sec {
+            padding: 0;
+            width: 70px;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;
+            font-size: 14px
+        }
+
+        .btn-sec, .btn-sec:hover {
+            background: #00c391;
+            color: #fff
+        }
+
+        .btn-public {
+            background: #1976d2;
+            color: #fff;
+            padding: 0;
+            width: 50px;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;
+            font-size: 14px;
+            text-align: center
+        }
+
+        .btn-public:hover {
+            background-color: #1976d2
+        }
+
+        .btn-private {
+            background: #795548;
+            color: #fff;
+            padding: 0;
+            width: 50px;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;
+            font-size: 14px;
+            text-align: center
+        }
+
+        .btn-private:hover {
+            background-color: #795548
+        }
+
+        .btn-line {
+            border: 1px solid #1976d2;
+            background: none;
+            color: #1976d2;
+            padding: 4px 20px;
+            font-size: 14px;
+            border-radius: 2px;
+            cursor: pointer
+        }
+
+        .btn-line.active, .btn-line.active:hover, .btn-line:hover {
+            color: #1976d2;
+            border-color: #1976d2
+        }
+
+        .btn-line.dis-btn, .btn-line.dis-btn.active, .btn-line.dis-btn.active:hover, .btn-line.dis-btn:hover {
+            color: #ccc;
+            border-color: #ccc
+        }
+
+        .btn-rule-blue, .btn-rule-blue:hover {
+            background-color: #1976d2
+        }
+
+        .btn-bg-grey {
+            background: #f5f5f5
+        }
+
+        .btn-red {
+            background-color: #f5515f
+        }
+
+        .btn-red:hover {
+            background-color: #ff4c5b
+        }
+
+        .tab-btn {
+            border: 1px solid #f2f2f2;
+            background: none;
+            color: #2f2f2f;
+            padding: 6px 30px;
+            font-size: 14px;
+            border-radius: 20px
+        }
+
+        .tab-btn:hover {
+            color: #1976d2;
+            border-color: #1976d2
+        }
+
+        .tab-btn.active {
+            border-color: #2f2f2f
+        }
+
+        .tab-btn.active:hover {
+            color: #1976d2;
+            border-color: #1976d2
+        }
+
+        .border-link-btn {
+            border: 1px solid #ececec;
+            color: #909090;
+            background: none;
+            padding: 6px 15px;
+            font-size: 14px;
+            border-radius: 5px
+        }
+
+        .border-link-btn.active, .border-link-btn.w-110, .border-link-btn:hover {
+            color: #1976d2;
+            border-color: #1976d2
+        }
+
+        .border-link-btn.w-110 {
+            width: 110px;
+            text-align: center
+        }
+
+        .border-link-btn.w-110:hover {
+            color: #1976d2;
+            border-color: #1976d2
+        }
+
+        .border-link-btn.blue, .border-link-btn.blue:hover {
+            color: #1976d2;
+            border: 1px solid #1976d2
+        }
+
+        .border-link-btn.big {
+            padding: 8px 30px;
+            font-size: 16px
+        }
+
+        .border-link-btn-red {
+            border: 1px solid #f5515f;
+            color: #f5515f;
+            background: none;
+            padding: 6px 30px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: default
+        }
+
+        .hov-blue {
+            color: inherit
+        }
+
+        .hov-blue:hover {
+            color: #1976d2 !important
+        }
+
+        .hov-white:hover {
+            color: #fff !important
+        }
+
+        .hov-green:hover {
+            color: #1976d2 !important
+        }
+
+        .hov-underline:hover {
+            text-decoration: underline
+        }
+
+        .hov-bg-none:hover {
+            background-color: transparent !important
+        }
+
+        .grey-round {
+            background: #c6d2da;
+            color: #fff;
+            height: 20px;
+            padding: 2px 10px;
+            border-radius: 8px
+        }
+
+        .grey-round-20 {
+            margin-right: 14px;
+            color: #fff;
+            background-color: #d6d5d5
+        }
+
+        .border-round-20, .grey-round-20 {
+            width: 20px;
+            padding: 2px 4px;
+            border-radius: 20px;
+            text-align: center
+        }
+
+        .border-round-20 {
+            border-width: 1px;
+            border-style: solid
+        }
+
+        .border-round-20.bor-main-green {
+            border-color: #1976d2;
+            color: #1976d2
+        }
+
+        .blue-round-120 {
+            background: #1976d2;
+            color: #fff;
+            height: 120px;
+            width: 120px;
+            border-radius: 60px;
+            line-height: 120px
+        }
+
+        .blue-round {
+            height: 16px;
+            line-height: 16px;
+            padding: 2px 15px;
+            border-radius: 8px
+        }
+
+        .blue-round, .mini-btn {
+            background: #1976d2;
+            color: #fff;
+            display: inline-block
+        }
+
+        .mini-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            line-height: 40px;
+            text-align: center;
+            font-family: SimHei;
+            font-size: 20px
+        }
+
+        .btn-dis {
+            border-color: #ccc !important
+        }
+
+        .btn-dis, .btn-dis:hover {
+            background-color: #ccc !important
+        }
+
+        .btn-fc-blue {
+            color: #1976d2
+        }
+
+        .btn-fc-blue.active, .btn-fc-blue:hover {
+            background-color: #1976d2;
+            color: #fff
+        }
+
+        .btn-fc-blue.dis {
+            color: #999
+        }
+
+        .btn-fc-blue.dis:hover {
+            color: #999;
+            background-color: #fff
+        }
+
+        .scan-white-btn {
+            padding: 4px 20px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #fff;
+            color: #1976d2;
+            margin-top: 24px
+        }
+
+        .pre-wrap {
+            white-space: pre-wrap;
+            word-wrap: break-word
+        }
+
+        .pre-wrap.pre {
+            white-space: pre
+        }
+
+        .word-wrap {
+            word-wrap: break-word
+        }
+
+        .blue-tag {
+            background: #1976d2;
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 10px
+        }
+
+        .blue-tag-s {
+            background: #1976d2
+        }
+
+        .blue-tag-s, .red-tag-s {
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 8px;
+            font-size: 12px
+        }
+
+        .red-tag-s {
+            background: #f5515f
+        }
+
+        .app-tags-wrap {
+            position: absolute;
+            top: 12px;
+            left: 26px
+        }
+
+        .app-tags-wrap.new-scan {
+            top: 2px;
+            left: 2px
+        }
+
+        .app-tags-wrap .app-tags {
+            display: block;
+            color: #fff;
+            font-size: 12px;
+            width: 18px;
+            height: 18px;
+            border-radius: 10px;
+            line-height: 18px;
+            text-align: center
+        }
+
+        .app-tags-wrap .app-tags.app-private-tag {
+            background-color: #7b89a2
+        }
+
+        .app-tags-wrap .app-tags.app-new-tag {
+            background-color: #1976d2
+        }
+
+        .cbodyblack {
+            color: #363d4c
+        }
+
+        .shadow-box {
+            border-radius: 8px;
+            box-shadow: 0 0 2px #ccc
+        }
+
+        .mid-grey {
+            color: #757575 !important
+        }
+
+        .low-grey {
+            color: #bdbdbd !important
+        }
+
+        .lower-gery {
+            color: #ececec
+        }
+
+        .dis-grey {
+            color: #f5f5f5
+        }
+
+        @disgrey {
+            color: #f5f5f5
+        } .bgc-lower-grey {
+              background-color: #ececec
+          }
+
+        .bgc-none {
+            background-color: transparent !important
+        }
+
+        .c-white {
+            color: #fff
+        }
+
+        .c-grey-90 {
+            color: #909090
+        }
+
+        .body-grey {
+            color: #f2f2f2
+        }
+
+        .body-black {
+            color: #212121 !important
+        }
+
+        .main-blue {
+            color: #1976d2 !important
+        }
+
+        .main-hov-blue {
+            color: #1976d2
+        }
+
+        .mid-blue {
+            color: #dbf4ff
+        }
+
+        .main-light-blue {
+            color: #b2ebf2
+        }
+
+        .app-tit {
+            color: #4f4f4f
+        }
+
+        .app-tit:hover, .main-green {
+            color: #1976d2
+        }
+
+        .rule-blue {
+            color: #1976d2 !important
+        }
+
+        .app-blue, .hov-app-blue:hover {
+            color: #1976d2
+        }
+
+        .app-light-blue {
+            color: #1976d2 !important
+        }
+
+        .hov-app-light-blue:hover {
+            color: #1976d2
+        }
+
+        .dark-blue {
+            color: #0066ab
+        }
+
+        .bgc-scanning-blue {
+            background-color: #1976d2
+        }
+
+        .main-bg-white {
+            background-color: #1976d2 !important;
+            color: #fff
+        }
+
+        .risk-high-c {
+            color: #ed6c44
+        }
+
+        .risk-mid-c {
+            color: #ffb230
+        }
+
+        .risk-low-c {
+            color: #c3a279
+        }
+
+        .high-red {
+            color: #ed6c44
+        }
+
+        .mid-yellow {
+            color: #ffb230
+        }
+
+        .low-brown {
+            color: #c3a279
+        }
+
+        .bgc-mid-grey {
+            color: #757575
+        }
+
+        .bgc-main-blue {
+            background-color: #1976d2
+        }
+
+        .c-red {
+            color: #f5515f
+        }
+
+        .bgc-red {
+            background-color: #f5515f
+        }
+
+        .bgc-bd {
+            background-color: #bdbdbd
+        }
+
+        .c-red-im {
+            color: #f5515f !important
+        }
+
+        .c-red-err-im {
+            color: #ed6c44 !important
+        }
+
+        .c-green {
+            color: #7ed321
+        }
+
+        .c-green-right-im {
+            color: #00c391 !important
+        }
+
+        .c-err-tip {
+            color: #8098ac
+        }
+
+        .help-b, .help-i {
+            font-style: inherit
+        }
+
+        .max-w-450 {
+            max-width: 450px
+        }
+
+        .max-h-54 {
+            max-height: 54px
+        }
+
+        .list-user-pic {
+            width: 44px;
+            height: 44px;
+            border-radius: 22px
+        }
+
+        .list-user-pic.users {
+            width: 36px;
+            height: 36px
+        }
+
+        .list-user-pic.w-50 {
+            border-radius: 25px
+        }
+
+        .list-app-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px
+        }
+
+        .iconfont.dis {
+            color: #bdbdbd !important
+        }
+
+        .menu-sec {
+            background: #efefef;
+            height: 40px;
+            line-height: 40px;
+            width: 100%
+        }
+
+        .menu-sec .menu-sec-list {
+            display: none;
+            width: 1200px;
+            margin: 0 auto
+        }
+
+        .menu-sec .menu-sec-list a {
+            width: 80px;
+            margin-right: 25px;
+            height: 36px;
+            display: inline-block;
+            text-align: center;
+            border-bottom: 4px solid #efefef;
+            font-size: 14px;
+            float: left;
+            color: #757575
+        }
+
+        .menu-sec .menu-sec-list .active, .menu-sec .menu-sec-list a:hover {
+            color: #1976d2;
+            border-color: #1976d2
+        }
+
+        .top {
+            height: 60px;
+            background: #071724;
+            min-width: 1200px;
+            color: #fff;
+            font-size: 14px;
+            box-shadow: 0 1px 1px #d6d6d6
+        }
+
+        .top .header {
+            position: relative;
+            width: 1030px;
+            padding-left: 170px;
+            margin: 0 auto
+        }
+
+        .top .header .logo {
+            position: absolute;
+            top: 7px;
+            left: 0
+        }
+
+        .top .header .logo img {
+            vertical-align: middle
+        }
+
+        .top .header .logo_desc {
+            position: absolute;
+            top: 0;
+            left: 240px;
+            font-size: 18px;
+            color: #04adff
+        }
+
+        .top .header .search-input-txt {
+            position: absolute;
+            top: 47px;
+            left: 660px;
+            width: 340px;
+            z-index: 100;
+            background: #fff;
+            color: #212121;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            box-shadow: 0 1px 15px rgba(18, 21, 21, .2)
+        }
+
+        .top .header .search-input-txt ul li:hover {
+            background: #e3f2fd
+        }
+
+        .top .header .search-input {
+            float: left;
+            height: 32px;
+            line-height: 32px;
+            border: 0;
+            background: #262d3b;
+            border-radius: 2px;
+            width: 340px;
+            text-indent: 15px;
+            margin-top: 15px;
+            color: #fff
+        }
+
+        .top .header .menu-v2 {
+            line-height: 60px;
+            margin: 0 auto
+        }
+
+        .top .header .menu-v2 .icon {
+            font-size: 25px
+        }
+
+        .top .header .menu-v2 a {
+            height: 60px;
+            display: inline-block;
+            position: relative;
+            float: left;
+            width: 94px;
+            text-align: center;
+            color: #9fb1c7;
+            letter-spacing: 0
+        }
+
+        .top .header .menu-v2 a span {
+            position: absolute;
+            line-height: 30px;
+            left: 0;
+            text-align: center;
+            width: 80px;
+            top: 40px;
+            font-size: 14px;
+            color: #212121;
+            display: none
+        }
+
+        .top .header .menu-v2 a:hover {
+            color: #fff;
+            background: #000
+        }
+
+        .top .header .menu-v2 a:hover span {
+            color: #efefef
+        }
+
+        .top .header .menu-v2 a.active {
+            color: #fff;
+            background: #000
+        }
+
+        .top .header .menu-v2 a.active span {
+            color: #efefef
+        }
+
+        .top .header .menu-v2 a.active:hover {
+            color: #fff
+        }
+
+        .top .header .menu-v2 a.active:hover span {
+            color: #efefef
+        }
+
+        .top .header .menu-v2 .fs-22 {
+            font-size: 22px
+        }
+
+        .top .header .menu-v2 .fs-24 {
+            font-size: 24px
+        }
+
+        .top .header .menu-v2 .fs-28 {
+            font-size: 28px
+        }
+
+        .top .header .menu {
+            position: absolute;
+            top: 0;
+            left: 220px
+        }
+
+        .top .header .menu a {
+            color: #2f2f2f;
+            text-decoration: none
+        }
+
+        .top .header .menu a:hover {
+            color: #42cfff
+        }
+
+        .top .header .out-ul {
+            height: 30px;
+            margin-top: 15px
+        }
+
+        .top .header .out-ul .out-li {
+            float: left;
+            padding: 0 20px;
+            text-align: center;
+            cursor: pointer;
+            height: 30px;
+            line-height: 30px;
+            position: relative
+        }
+
+        .top .header .out-ul .out-li.right2 {
+            z-index: 6
+        }
+
+        .top .header .out-ul .out-li.right1 {
+            padding-top: 2px
+        }
+
+        .top .header .out-ul .out-li .iconfont {
+            color: #79889a
+        }
+
+        .top .header .out-ul .out-li .down-arry {
+            font-size: 14px;
+            color: #757575;
+            margin-left: 4px;
+            position: relative;
+            top: -2px
+        }
+
+        .top .header .out-ul .out-li.active a {
+            color: #1976d2
+        }
+
+        .top .header .out-ul .out-li .menu-item-box {
+            display: none;
+            position: absolute;
+            width: 90px;
+            z-index: 5;
+            background-color: #071724;
+            box-shadow: 0 1px 15px rgba(18, 21, 21, .2);
+            padding: 10px 0;
+            top: 40px;
+            left: 0
+        }
+
+        .top .header .out-ul .out-li .menu-item-box li {
+            text-align: center
+        }
+
+        .top .header .out-ul .out-li .menu-item-box li:hover {
+            background-color: none
+        }
+
+        .top .header .out-ul .out-li .menu-item-box li a {
+            color: #757575;
+            padding: 0;
+            height: 36px;
+            width: 90px;
+            text-align: center;
+            line-height: 36px;
+            display: block…
+    </style>
+    <link href="/static/css/common.css" rel="stylesheet">
+    <script type="text/javascript" src="/static/js/jquery-1.8.3.js"></script>
+    {#    <style type="text/css" >#}
+    {#        body{font:12px/1.5 Arial,SimHei,Tahoma,Helvetica,lucida grande,lucida sans unicode,lucida,helvetica,Hiragino Sans GB,sans-serif}.db{display:block}.head{height:50px;top:20px;right:35px;z-index:4;position:fixed}.head .logo{margin-left:50px}.head .white-btn{color:#fff;font-size:14px;cursor:pointer;border-radius:4px;height:40px;width:173px;background:#fff;line-height:40px;text-align:center}.head .white-btn a{color:#999;text-decoration:none}.head .white-btn:hover{background:#fff;color:#999}.head .white-btn:hover a{color:#666}.input-box-bg{background:url(../static/images/login_bg.png?b1f366e) top no-repeat;position:fixed;top:0;left:0;right:0;bottom:0;z-index:1}.input-box{margin:70px auto 30px;width:335px;position:relative;z-index:3}.input-box a{text-decoration:none;font-size:14px}.input-box .reg-title{font-size:40px;font-weight:100;text-align:center;color:#fff;font-family:San Francisco,Tahoma}.input-box .reg-text{font-size:12px;font-family:Tahoma;text-align:center;margin:0 auto 10px;color:#fff}.input-box .login-logo{text-align:center;padding-top:40px;padding-bottom:20px}.input-box .login-text{font-size:14px;color:#f16767;text-align:center;padding:5px 0;display:none}.input-box .btn-s{cursor:pointer;border:0;background:#1976d2;color:#fff;width:332px;border-radius:3px;height:40px;text-align:center;line-height:40px}.input-box .btn-s:hover{background-color:#0d47a1}.input-box .login-bottom{margin-top:36px;color:#fff;line-height:34px}.input-box .login-bottom .btn-s{float:right;cursor:pointer;background:transparent;color:#1976d2;width:90px;height:34px;text-align:center;line-height:34px;font-size:14px;border:1px solid #1976d2;border-radius:3px}.input-box .login-bottom .btn-s a{color:#1976d2;text-decoration:none}.hov-white:hover{color:#fff!important}.input-box .login-bottom{font-size:14px}.input-box .login-bottom .btn-s:hover{color:#0d47a1;border:1px solid #0d47a1}.input-box .login-bottom .btn-s:hover a{color:#0d47a1}.input-box .p-logo{padding-top:75px}.input-box .text-1{font-size:18px;color:#303441;margin-top:10px}.input-box .text-1,.input-box .text-2{font-family:San Francisco,Tahoma;padding:5px}.input-box .text-2{font-size:12px;color:#90a4ad}.input-box td{line-height:40px;font-size:14px}.input-box .other-msg a{color:#1976d2;text-decoration:none;font-size:14px;border-radius:2px}.input-box .inp{width:300px;height:40px;line-height:40px;border:0;padding:0 15px;font-size:16px;z-index:2;position:relative;outline:none;color:#071723;border-radius:2px}.input-box .inp:focus{background:#fff}.input-box .inp2{width:300px;height:40px;line-height:40px;background:#fff;border:1px solid #dedede;margin:7px auto;padding:0 15px;font-size:16px;z-index:2;position:relative;outline:none}.input-box .inp_bg{background:#000;opacity:.2;height:50px;width:332px;top:7px;left:0;z-index:1;position:absolute}.input-box .inp_s{width:190px;height:40px;line-height:40px;border:0;font-size:16px;padding:0 15px;position:relative;z-index:2;color:#071723;border-radius:2px}.input-box .inp_s:focus{background:#fff}.input-box .btn{border:0;width:330px;margin-top:7px;cursor:pointer;height:40px;text-align:center;color:#fff;background:#1976d2;border-radius:3px;font-size:16px}.input-box .btn:hover{background-color:#0d47a1}.input-box .ver_code{position:absolute;top:11px;padding:5px 18px;cursor:pointer;background:#fff;width:64px;height:30px;border-radius:2px;right:7px}.input-box .error-msg{background:#f16767;font-size:12px;display:none;color:#fff;position:absolute;right:-200px;width:170px;padding:0 15px;top:7px;height:40px;line-height:40px}.input-box .save_user{position:absolute;left:0;top:0;color:#fff}.input-box .save_user input{vertical-align:middle;background:transparent;border:1px solid #fff}.pr{position:relative}.c-f:after{content:".";display:block;height:0;clear:both;visibility:hidden}.c-f{_overflow:auto;zoom:1}.w-110{width:110px!important}.text-c{text-align:center}.warn{float:right;color:#f16767;line-height:40px;font-size:12px;display:none}.goto-mail{width:700px;margin:0 auto;text-align:center;display:none;position:relative;z-index:3}.goto-mail.pw{width:335px}.goto-mail.pw .icon-finish-wrap .iconfont{color:#1976d2}.icon-finish-wrap{text-align:center;margin-bottom:40px}.icon-finish-wrap .iconfont{color:#1976d2;font-size:50px}.mail-tip{font-size:16px;color:#90a4ad;margin-bottom:40px}.mail-link{display:block;background-color:#1976d2;color:#fff;font-size:14px;width:330px;height:40px;margin:0 auto;line-height:40px;text-decoration:none}::-webkit-input-placeholder{color:#79889a!important}.deep_input ::-webkit-input-placeholder{color:#999!important}.blue-a{color:#1976d2}.blue-a:hover{color:#0d47a1}#}
+    {#    </style>#}
+</head>
+<body style="display: block;">
+<script type="text/javascript">
+    var isEmail = function (val) {
+        var pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        var domains = ["qq.com", "163.com", "vip.163.com", "263.net", "yeah.net", "sohu.com", "sina.cn", "sina.com", "eyou.com", "gmail.com", "hotmail.com", "42du.cn"];
+        if (pattern.test(val)) {
+            var domain = val.substring(val.indexOf("@") + 1);
+            for (var i = 0; i < domains.length; i++) {
+                if (domain == domains[i]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    function createAjax() {
+        var ajax;
+        if (window.ActiveXObject) {
+            ajax = new ActiveXObject("Microsoft.XMLHTTP");
+        } else if (window.XMLHttpRequest) {
+            ajax = new XMLHttpRequest();
+        }
+        return ajax;
+    }
+
+    function completeHandler(event) {
+        var json = JSON.parse(event.target.responseText);
+        responseHandler(json);
+    }
+
+    function responseHandler(json) {
+        if (json.message == '验证码正确') {
+            $('#mail-code-table').toggle();
+            $('#mail-code-table2').toggle();
+            $('#reg-table').toggle();
+            $('#reg-table2').toggle();
+        } else {
+            alert(json.message);
+        }
+    }
+
+    $(document).ready(function () {
+        var value = $('#step').val();
+        if (value ==1){
+            $('#mail-code-table').hide();
+            $('#mail-code-table2').hide();
+            $('#reg-table').show();
+            $('#reg-table2').show();
+        }
+        $("#mail-ver-btn").click(function () {
+            var email = $("#email").val();
+            if (isEmail(email)) {
+                var ajax = createAjax();
+                ajax.addEventListener("load", completeHandler, false);
+                ajax.open("POST", "../sendEmailCode/");
+                ajax.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
+                ajax.setRequestHeader("Content-Type", "application/json");
+                ajax.send("{'email':'" + email + "'}");
+            } else {
+                $("#errorCode").text("邮箱格式错误");
+                $("#errorCode").attr("style", "display:block;");
+
+            }
+        });
+        $("#stepNext").click(function () {
+            var code = $("#mail_ver_code").val();
+            var email = $("#email").val();
+            if (code.length == 6) {
+                var ajax = createAjax();
+                ajax.addEventListener("load", completeHandler, false);
+                ajax.open("POST", "../verify/");
+                ajax.setRequestHeader("X-CSRFToken", '{{ csrf_token }}');
+                ajax.setRequestHeader("Content-Type", "application/json");
+                ajax.send("{'email':'" + email + "', 'code':'" + code + "'}");
+            } else {
+                if (isEmail(email)){
+                    $("#errorCode").text("验证码格式错误");
+                    $("#errorCode").attr("style", "display:block;");
+                }else{
+                    $("#errorCode").text("邮箱格式错误");
+                    $("#errorCode").attr("style", "display:block;");
+                }
+
+            }
+        });
+        $('#xieyi').click(function () {
+            $('#detail').toggle();
+        });
+        $('#close').click(function () {
+            $('#detail').toggle();
+        });
+        $('#continue').click(function () {
+            $('#detail').toggle();
+            $('#agree').get(0).checked=true;
+        })
+    });
+    /*$("#mail-ver-btn").click(function () {
+        alert("123");
+    });*/
+</script>
+<div _v-af1df450="">
+    <div class="head pc_title" _v-af1df450="">
+        <div class="border-btn" _v-af1df450="">
+            <a href="../login/" class="db" _v-af1df450="">已有账号？</a>
+        </div>
+    </div>
+    <div class="input-box-bg" _v-af1df450="">
+    </div>
+    <div class="input-box-bg-img" _v-af1df450="">
+    </div>
+    <div class="input-box c-f" _v-af1df450="">
+        {#        <div class="login-logo" style="margin-bottom:30px" _v-af1df450="">#}
+        {#            <img src="../static/images/login_logo.png?9107c90" class="pc_title" width="280" _v-af1df450="">#}
+        {#            <img src="../static/images/login_logo_m.png?ca649a8" class="mobile_title" style="max-width:300px;width:98%;margin:0px auto" _v-af1df450="">#}
+        {#            <img src="../static/images/logo_en_sm.png?1d3bef6" class="pc_title" width="280" _v-af1df450="" style="display: none;">#}
+        {#            <img src="../static/images/logo_en_big.png?d429215" class="mobile_title" style="max-width: 300px; width: 98%; margin: 0px auto; display: none;" _v-af1df450="">#}
+        {#        </div>#}
+        <div class="reg-text-err" _v-af1df450=""></div>
+        <input type="hidden" value="{{ step }}" id="step">
+        {% if message %}
+            <div class="login-text" style="display: block;">{{ message }}</div>
+        {% endif %}
+        <div class="login-text" id="errorCode" style="display: none;">请输入验证码</div>
+        <table align="center" class="mar-t-20 border" id="mail-code-table" _v-af1df450="">
+            <tbody _v-af1df450="">
+            <tr _v-af1df450="">
+                <td class="pr b-bottom" _v-af1df450="">
+                    <div class="error-msg error-email step-one-err pc_title" _v-af1df450=""
+                         style="display: none;"></div>
+                    <input class="inp" type="text" id="email" name="email" _v-af1df450="" placeholder="邮箱">
+                </td>
+            </tr>
+            <tr _v-af1df450="">
+                <td class="prc -f" _v-af1df450="">
+
+                    {#                    <div class="error-msg err-mail-code step-one-err pc_title" _v-af1df450="" style="display: block;">请输入验证码</div>#}
+                    <input class="inp_s" type="text" id="mail_ver_code" name="" _v-af1df450="" placeholder="验证码">
+                    <span class="mail-ver-btn" _v-af1df450="" id="mail-ver-btn">发送验证码</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table align="center" class="mar-t-20" id="mail-code-table2" _v-af1df450="">
+            <tbody _v-af1df450="">
+            <tr _v-af1df450="">
+                <td _v-af1df450="">
+                    <div class="btn reg-btn" style="padding:0 1px;border-radius:0px" _v-af1df450="" id="stepNext">下一步
+                    </div>
+                    <div class="text-right" _v-af1df450="">
+                        <a href="javascript:void(0)" style="color:#1976D2" _v-af1df450="">English</a>
+                        <a href="javascript:void(0)" style="color:#1976D2" _v-af1df450="">中文</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <form action="/register/" method="post">
+            {% csrf_token %}
+            <table align="center" class="mar-t-20 reg-table border" id="reg-table" _v-af1df450="">
+                <tbody _v-af1df450="">
+                <tr _v-af1df450="">
+                    <td class="pr b-bottom" _v-af1df450="">
+                        <div class="error-msg error-username pc_title" _v-af1df450=""></div>
+                        {#                    <input class="inp" type="text" id="username" name="username" _v-af1df450="" placeholder="用户名">#}
+                        {{ register_form.username }}
+                    </td>
+                </tr>
+                <tr _v-af1df450="">
+                    <td class="pr b-bottom" _v-af1df450="">
+                        <div class="error-msg error-password pc_title" _v-af1df450=""></div>
+                        {#                    <input class="inp" type="password" id="password" name="password" _v-af1df450="" placeholder="密码">#}
+                        {{ register_form.password }}
+                    </td>
+                </tr>
+                <tr _v-af1df450="">
+                    <td class="pr b-bottom" _v-af1df450="">
+                        <div class="error-msg error-confirm_password pc_title" _v-af1df450=""></div>
+                        {#                    <input class="inp" type="password" id="confirm_password" name="confirm_password" _v-af1df450="" placeholder="重复密码">#}
+                        {{ register_form.confirm_password }}
+                    </td>
+                </tr>
+                <tr _v-af1df450="">
+                    <td class="pr" _v-af1df450="">
+                        <div class="error-msg error-verification_code pc_title" _v-af1df450=""></div>
+                        <input class="inp_s" type="text" autocomplete="off" id="id_captcha_1" name="captcha_1"
+                               _v-61b6f824="" placeholder="验证码">
+                        <img class="ver_code reg" style="top:0px" id="ver-code-img" src="{{ image_url }}"
+                             _v-61b6f824="">
+                        <input type="hidden" name="captcha_0" value={{ hash_key }} _v-61b6f824="" required
+                               id="id_captcha_0" placeholder="" class="inp_s"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table align="center" class="mar-t-20 reg-table" id="reg-table2" _v-af1df450="">
+                <tbody _v-af1df450="">
+                <tr _v-af1df450="">
+                    <td _v-af1df450="">
+                        <input type="checkbox" id="agree" value="true" class="pc_title" _v-af1df450="">
+                        <label for="agree" class="agree-txt pc_title" _v-af1df450="">
+                            <i class="help-i" _v-af1df450="">阅读并同意</i>
+                            <a href="#" _v-af1df450="" id="xieyi">《WoodPecker 移动安全平台服务协议》</a>
+                        </label>
+                        <a class="mobile_title" style="color:#666" href="terms.html" target="_blank" _v-af1df450="">注册即同意
+                            《WoodPecker 移动安全平台服务协议》</a>
+                    </td>
+                </tr>
+                <tr _v-af1df450="">
+                    <td _v-af1df450="">
+                        <input class="btn reg-btn" style="padding: 0px 26px" type="submit" id="sub2"
+                               name="sub" _v-af1df450="" value="注 册">
+{#                        <input class="btn reg-btn" style="padding: 0px; display: none;" type="submit" id="sub"#}
+{#                               name="sub" _v-af1df450="" value="注 册">#}
+{#                        <input class="btn reg-btn grey" style="padding:0px" type="submit" name="sub"#}
+{#                               _v-af1df450="" value="注 册">#}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+<div class="dialog_shadow" _v-af1df450="" style="display: none;"></div>
+<div class="dialog_box" _v-af1df450="" style="display: none;" id="detail">
+    <div class="title border-bottom" _v-af1df450="">WoodPecker 移动安全平台服务协议</div>
+    <div class="mar-t-20 dialog_box_content" _v-af1df450="">
+        <p _v-af1df450="">【首部及导言】</p>
+        <p _v-af1df450=""><b _v-af1df450="">欢迎您使用WoodPecker 移动安全平台的服务！ 为使用WoodPecker 移动安全平台服务，您应当阅读并遵守《WoodPecker
+            移动安全平台服务协议》（以下简称“本协议”）。请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款，以及开通或使用某项服务的单独协议。限制、免责条款可能以黑体加粗形式提示您注意。除非您已阅读并接受本协议所有条款，否则您无权使用WoodPecker
+            移动安全平台服务。您使用WoodPecker 移动安全平台服务即视为您已阅读并同意上述协议的约束。 如果您未满18周岁，请在法定监护人的陪同下阅读本协议，并特别注意未成年人使用条款。</b></p>
+        <p _v-af1df450="">一、【协议的范围】</p>
+        <p _v-af1df450="">1.1本协议是您与上海犇众信息技术有限公司之间关于使用WoodPecker 移动安全平台相关服务所订立的协议。<br _v-af1df450="">
+            11.2本协议内容同时包括WoodPecker 移动安全平台可能不断发布的关于本服务的相关协议、业务规则等内容。上述内容一经正式发布，即为本协议不可分割的组成部分，您同样应当遵守。</p>
+        <p _v-af1df450="">二、【关于本服务】</p>
+        <p _v-af1df450="">2.1WoodPecker 移动安全平台是一个移动互联网信息安全大数据社区平台。本协议项下的服务是指WoodPecker
+            移动安全平台向用户提供的包括但不限于分享应用信息、查看应用信息、认领应用、发表文章、参与相关活动、进行互动评论、安全检测、应用加固、安全测评、渠道监测等服务（以下简称“本服务”）。WoodPecker
+            移动安全平台保留随时变更、中止或终止部分或全部服务的权利。</p>
+        <p _v-af1df450="">2.2您在WoodPecker 移动安全平台注册成为安全研究用户后，可通过WoodPecker 移动安全平台提交应用或发表情报文章，情报文章经过审核与确认后，您可根据WoodPecker
+            移动安全平台奖励规则获得相应的奖励，但上述审核及确认并不代表WoodPecker 移动安全平台对您提交信息提供任何保证或承诺。同时，WoodPecker 移动安全平台可在适当的时间公开情报文章内容。</p>
+        <p _v-af1df450="">2.3用户在WoodPecker 移动安全平台成功注册并通过认证后，WoodPecker
+            移动安全平台可在适当的时间披露与用户有关的情报信息，用户可进行认领，以帮助用户进行产品优化。</p>
+        <p _v-af1df450="">2.4用户提供的APK、情报文章或其他信息及其生成的数据和规则，WoodPecker
+            移动安全平台有权进行免费长期的使用（包含商业使用），使用方式包括但不限于发布、向第三方披露、整理用于平台发布的研究报告等。</p>
+        <p _v-af1df450="">2.5您理解并同意WoodPecker
+            移动安全平台是一个中立的平台服务提供者，旨在帮助移动安全研究员更方便的进行研究，对用户提供相应的安全服务，以帮助用户进行产品优化和风险控制并促进安全技术爱好者进行学习、交流。您不得在本平台发布任何侵犯他人合法权益或影响网络信息安全等的非法内容。<b
+                    _v-af1df450="">WoodPecker
+                移动安全平台不保证平台自动采集或用户自行上传的第三方应用的安全性、准确性、有效性及其他不确定的风险，由此若引发的任何争议及损害，与WoodPecker 移动安全平台无关，WoodPecker
+                移动安全平台不承担任何责任。</b></p>
+        <p _v-af1df450="">三、【帐号与密码安全】</p>
+        <p _v-af1df450="">3.1您在使用WoodPecker 移动安全平台服务时可能需要注册帐号，或使用您的其他第三方帐号。关于您使用帐号的具体规则，请您遵守本协议或其他第三方账号用户服务协议。</p>
+        <p _v-af1df450="">3.2 WoodPecker 移动安全平台特别提醒您应妥善保管您的帐号和密码。当您使用完毕后，应安全退出。因您保管不善可能导致遭受盗号或密码失窃，责任由您自行承担。</p>
+        <p _v-af1df450="">四、【用户个人信息保护】</p>
+        <p _v-af1df450="">4.1保护用户个人信息是WoodPecker 移动安全平台的一项基本原则。WoodPecker 移动安全平台将会采取合理的措施保护用户的个人信息。</p>
+        <p _v-af1df450="">4.2您承诺以其真实身份注册成为WoodPecker
+            移动安全平台的用户，并保证所提供的身份资料信息真实、完整、有效，依据相关法律法规和本协议约定对所提供的信息承担相应的法律责任。WoodPecker
+            移动安全平台有权审查您注册所提供的身份信息是否真实、有效，如发现您提供的身份信息不符合本协议的要求，WoodPecker
+            移动安全平台有权拒绝该您的注册请求。您在注册帐号或使用本服务的过程中，可能需要提供或使用一些必要的信息。例如：厂商用户应当提交加盖公章的统一社会信用代码、联系人电话、身份证、授权证明等材料以进行身份认证；白帽子用户在提取奖金或者兑换奖品的时候，需要通过上传个人资料（包括但不仅限于个人身份信息、电话号码、电子邮箱、银行账号、联系地址等）以进行身份校验。若您填写的信息不完整，则无法使用本服务或在使用过程中受到限制。</p>
+        <p _v-af1df450="">4.3一般情况下，您可随时浏览、修改自己提交的信息，但出于安全性和身份识别的考虑，您可能无法修改注册时提供的初始注册信息及其他验证信息。</p>
+        <p _v-af1df450="">4.4 WoodPecker 移动安全平台将运用各种安全技术和程序建立完善的管理制度来保护您的个人信息，以免遭受未经授权的访问、使用或披露。</p>
+        <p _v-af1df450="">4.5 WoodPecker 移动安全平台不会将您的个人信息转移或披露给任何非关联的第三方，<b _v-af1df450="">除非：</b></p> <b _v-af1df450="">（1）相关法律法规或法院、政府机关要求；<br
+            _v-af1df450=""> （2）或为完成合并、分立、收购或资产转让而转移；<br _v-af1df450=""> （3）或为提供您要求的服务所必需；<br _v-af1df450="">
+        （4）您或您监护人授权WoodPecker 移动安全平台披露的；<br _v-af1df450=""> （5）WoodPecker 移动安全平台为了维护自己合法权益而向用户提起诉讼或者仲裁时；<br
+                _v-af1df450=""> （6）应您监护人的合法要求而提供用户个人身份信息时；<br _v-af1df450=""> （7）为维护其他个人或法人的合法权益或社会公众的利益所需。</b>
+        <p _v-af1df450="">4.6 WoodPecker
+            移动安全平台非常重视对未成年人个人信息的保护。若您是18周岁以下的未成年人，在使用本服务前，应事先取得您家长或法定监护人（以下简称"监护人"）的书面同意。</p>
+        <p _v-af1df450="">4.7在不透露单个用户隐私资料的前提下，WoodPecker 移动安全平台有权对整个用户数据库进行技术分析并对已进行分析、整理后的用户数据库进行商业上的利用。尽管WoodPecker
+            移动安全平台已经利用现有的科学技术对您的隐私权保护做了极大的努力，但是仍然不能保证现有的安全技术措施使用户的技术信息等不受任何形式的损失。</p>
+        <p _v-af1df450="">五、【使用本服务的方式】</p>
+        <p _v-af1df450="">5.1除非您与WoodPecker 移动安全平台另有约定，您同意本服务仅为您个人非商业性质的使用。</p>
+        <p _v-af1df450="">5.2您应当通过WoodPecker 移动安全平台提供或认可的方式使用本服务。您依本协议条款所取得的权利不可转让。</p>
+        <p _v-af1df450="">5.3您不得使用未经WoodPecker 移动安全平台授权的插件、外挂或第三方工具对本协议项下的服务进行干扰、破坏、修改或施加其他影响。</p>
+        <p _v-af1df450="">六、【按现状提供服务】</p>
+        <p _v-af1df450="">您理解并同意，WoodPecker 移动安全平台的服务是按照现有技术和条件所能达到的现状提供的。WoodPecker 移动安全平台会尽最大努力向您提供服务，确保服务的连贯性和安全性；<b
+                _v-af1df450="">但WoodPecker
+            移动安全平台不能随时预见和防范法律、技术以及其他风险，包括但不限于不可抗力、病毒、木马、黑客攻击、系统不稳定、第三方服务瑕疵、政府行为等原因可能导致的服务中断、数据丢失以及其他的损失和风险。</b></p>
+        七、【自备设备】<p _v-af1df450=""></p>
+        <p _v-af1df450="">7.1您应当理解，您使用WoodPecker 移动安全平台的服务需自行准备与相关服务有关的终端设备（如电脑、调制解调器等装置），并承担所需的费用（如电话费、上网费等费用）。</p>
+        <p _v-af1df450="">7.2您理解并同意，您使用本服务时会耗用您的终端设备和带宽等资源。</p>
+        <p _v-af1df450="">八、【广告】</p>
+        <p _v-af1df450="">8.1您同意WoodPecker 移动安全平台可以在提供服务的过程中自行或由第三方广告商向您发送广告、推广或宣传信息（包括商业与非商业信息），其方式和范围可不经向您特别通知而变更。</p>
+        <p _v-af1df450="">8.2 WoodPecker 移动安全平台可能为您提供选择关闭广告信息的功能，但任何时候您都不得以本协议未明确约定或WoodPecker
+            移动安全平台未书面许可的方式屏蔽、过滤广告信息。</p>
+        <p _v-af1df450="">8.3 WoodPecker 移动安全平台依照法律的规定对广告商履行相关义务，您应当自行判断广告信息的真实性并为自己的判断行为负责，<b _v-af1df450="">除法律明确规定外，您因依该广告信息进行的交易或前述广告商提供的内容而遭受的损失或损害，WoodPecker
+            移动安全平台不承担责任。</b></p>
+        <p _v-af1df450="">8.4您同意，对WoodPecker 移动安全平台服务中出现的广告信息，您应审慎判断其真实性和可靠性，除法律明确规定外，您应对依该广告信息进行的交易负责。</p>
+        <p _v-af1df450="">九、【收费服务】</p>
+        <p _v-af1df450="">9.1 WoodPecker 移动安全平台的部分服务可能是以收费方式提供的，如您使用收费服务，请遵守相关的协议。</p>
+        <p _v-af1df450="">9.2 WoodPecker 移动安全平台可能根据实际需要对收费服务的收费标准、方式进行修改和变更，也可能会对部分免费服务开始收费。前述修改、变更或开始收费前，WoodPecker
+            移动安全平台将在相应服务页面进行通知或公告。如果您不同意上述修改、变更或付费内容，则应停止使用该服务。</p>
+        <p _v-af1df450="">十、【第三方提供的产品或服务】</p>
+        <p _v-af1df450=""><b _v-af1df450="">10.1您在WoodPecker 移动安全平台上使用第三方提供的产品或服务时，除遵守本协议约定外，还应遵守第三方的用户协议。WoodPecker
+            移动安全平台和第三方对可能出现的纠纷在法律规定和约定的范围内各自承担责任。</b></p>
+        <p _v-af1df450="">10.2因用户使用本服务或要求WoodPecker 移动安全平台提供特定服务时，本服务可能会调用第三方系统或者通过第三方支持用户的使用或访问，使用或访问的结果由该第三方提供，<b
+                _v-af1df450="">WoodPecker 移动安全平台不保证通过第三方提供服务及内容的安全性、准确性、有效性及其他不确定的风险，由此若引发的任何争议及损害，与WoodPecker
+            移动安全平台无关，WoodPecker 移动安全平台不承担任何责任。</b></p>
+        <p _v-af1df450="">十一、【知识产权声明】</p>
+        <p _v-af1df450="">11.1在WoodPecker 移动安全平台服务中提供的内容（包括但不限于网页、文字、图片、音频、视频、图表等）的知识产权归WoodPecker 移动安全平台所有。</p>
+        <p _v-af1df450="">11.2在本服务中所使用的“WoodPecker 移动安全平台”及相关形象等商业标识，其著作权或商标权归WoodPecker 移动安全平台所有。</p>
+        <p _v-af1df450="">11.3未经WoodPecker 移动安全平台书面同意，任何人不得为任何商业或非商业目的自行或许可任何第三方实施、利用、使用、转让上述知识产权。</p>
+        <p _v-af1df450="">11.4上述及其他任何本服务包含的内容的知识产权均受到法律保护，未经WoodPecker 移动安全平台书面许可，任何人不得以任何形式进行使用或创造相关衍生作品。</p>
+        <p _v-af1df450="">十二、【用户违法行为】</p>
+        <p _v-af1df450="">12.1您在使用本服务时须遵守法律法规，不得利用本服务从事违反法律法规的行为，包括但不限于：</p>
+        （1）发布、传送、传播、储存危害国家安全统一、破坏社会稳定、违反公序良俗、侮辱、诽谤、淫秽、暴力以及任何违反国家法律法规的内容；<br _v-af1df450="">
+        （2）发布、传送、传播、储存侵害他人知识产权、商业秘密等合法权利以及破坏信息网络安全的内容；<br _v-af1df450=""> （3）恶意虚构事实、隐瞒真相以误导、欺骗他人；<br _v-af1df450="">
+        （4）发布、传送、传播广告信息及垃圾信息；<br _v-af1df450=""> （5）其他法律法规禁止的行为。 <p _v-af1df450="">
+        12.2如果您违反了本条约定，相关国家机关或机构可能会对您提起诉讼、罚款或采取其他制裁措施，并要求WoodPecker 移动安全平台给予协助。<b _v-af1df450="">造成损害的，您应独立承担或依法向受侵害一方进行赔偿，WoodPecker
+        移动安全平台不承担任何责任。</b></p>
+        <p _v-af1df450="">12.3如果WoodPecker 移动安全平台发现或收到他人举报您发布的信息违反本协议约定，WoodPecker
+            移动安全平台有权进行独立判断并采取技术手段予以删除、屏蔽或断开链接、终止服务。同时，WoodPecker 移动安全平台有权视您的行为性质，采取包括但不限于暂停或终止服务、封号等措施，追究法律责任等措施。</p>
+        <p _v-af1df450=""><b _v-af1df450="">12.4您违反本协议约定，导致任何第三方损害的，您应当独立承担责任；WoodPecker 移动安全平台因此遭受损失的，您也应当给予全额的赔偿。</b>
+        </p>
+        <p _v-af1df450="">十三、【遵守当地法律监管】</p>
+        <p _v-af1df450="">13.1您在使用本服务过程中应当遵守当地相关的法律法规，并尊重当地的道德和风俗习惯。<b
+                _v-af1df450="">如果您的行为违反了当地法律法规或道德风俗，您应当为此独立承担责任。</b></p>
+        <p _v-af1df450="">13.2您应避免因使用本服务而使WoodPecker 移动安全平台卷入政治和公共事件，否则WoodPecker 移动安全平台有权暂停或终止对您的服务。</p>
+        <p _v-af1df450="">
+            13.3您充分了解并同意，您必须为自己的一切行为负责，包括您所发表的任何内容以及由此产生的任何后果。您应对本服务中的内容自行加以判断，并承担因使用内容而引起的所有风险，包括因对内容的正确性、完整性或实用性的依赖而产生的风险。WoodPecker
+            移动安全平台无法且不会对因前述风险而导致的任何损失或损害承担责任。</p>
+        <p _v-af1df450="">十四、【用户发送、传播的内容与第三方投诉处理】</p>
+        <p _v-af1df450=""><b _v-af1df450="">14.1您通过本服务发送或传播的内容（包括但不限于网页、文字、图片、音频、视频、图表等）均由您自行承担责任。</b></p>
+        <p _v-af1df450=""><b _v-af1df450="">14.2您发送或传播的内容应有合法来源。</b></p>
+        <p _v-af1df450=""><b _v-af1df450="">14.3您同意WoodPecker 移动安全平台可为履行本协议或提供本服务的目的而使用您发送或传播的内容。</b></p>
+        <p _v-af1df450=""><b _v-af1df450="">14.4如果WoodPecker 移动安全平台收到权利人通知，主张您发送或传播的内容侵犯其相关权利的，您同意WoodPecker
+            移动安全平台有权进行独立判断并采取删除、屏蔽或断开链接等措施。</b></p>
+        <p _v-af1df450="">十五、【不可抗力及其他免责事由】</p>
+        <p _v-af1df450=""><b _v-af1df450="">15.1您理解并同意，在使用本服务的过程中，可能会遇到不可抗力等风险因素，使本服务发生中断。不可抗力是指不能预见、不能克服并不能避免且对一方或双方造成重大影响的客观事件，包括但不限于自然灾害如洪水、地震、瘟疫流行和风暴等以及社会事件如战争、动乱、政府行为等。出现上述情况时，WoodPecker
+            移动安全平台将努力在第一时间与相关单位配合，及时进行修复，但是由此给您造成的损失WoodPecker 移动安全平台在法律允许的范围内免责。</b></p>
+        <p _v-af1df450=""><b _v-af1df450="">15.2在法律允许的范围内，WoodPecker 移动安全平台对以下情形导致的服务中断或受阻不承担责任：</b></p><b
+            _v-af1df450=""> （1）受到计算机病毒、木马或其他恶意程序、黑客攻击的破坏；<br _v-af1df450=""> （2）用户或WoodPecker
+        移动安全平台的电脑软件、系统、硬件和通信线路出现故障；<br _v-af1df450=""> （3）用户操作不当；<br _v-af1df450=""> （4）用户通过非WoodPecker
+        移动安全平台授权的方式使用本服务；<br _v-af1df450=""> （5）其他WoodPecker 移动安全平台无法控制或合理预见的情形。</b>
+        <p _v-af1df450=""><b _v-af1df450="">15.3您理解并同意，在使用本服务的过程中，可能会遇到网络信息或其他用户行为带来的风险，WoodPecker
+            移动安全平台不对任何信息的真实性、适用性、合法性承担责任，也不对因侵权行为给您造成的损害负责。这些风险包括但不限于：</b></p> （1）来自他人匿名或冒名的含有威胁、诽谤、令人反感或非法内容的信息；<br
+            _v-af1df450=""> （2）因使用本协议项下的服务，遭受他人误导、欺骗或其他导致或可能导致的任何心理、生理上的伤害以及经济上的损失；<br _v-af1df450="">
+        （3）其他因网络信息或用户行为引起的风险。 <p _v-af1df450=""><b _v-af1df450="">15.4 WoodPecker
+        移动安全平台依据本协议约定获得处理违法违规内容的权利，该权利不构成WoodPecker 移动安全平台的义务或承诺，WoodPecker 移动安全平台不能保证及时发现违法行为或进行相应处理。</b></p>
+        <p _v-af1df450=""><b
+                _v-af1df450="">15.5在任何情况下，您不应轻信借款、索要密码或其他涉及财产的网络信息。涉及财产操作的，请一定先核实对方身份，并请经常留意有关防范诈骗犯罪的提示。</b></p>
+        <p _v-af1df450="">十六、【协议的生效与变更】</p>
+        <p _v-af1df450=""><b _v-af1df450="">16.1您使用WoodPecker 移动安全平台服务即视为您已阅读本协议并接受本协议的约束。</b></p>
+        <p _v-af1df450="">16.2 WoodPecker 移动安全平台有权在必要时修改本协议条款。您可以在相关服务页面查阅最新版本的协议条款。</p>
+        <p _v-af1df450="">16.3本协议条款变更后，如果您继续使用本服务，即视为您已接受修改后的协议。如果您不接受修改后的协议，应当停止使用本服务。</p>
+        <p _v-af1df450="">十七、【服务的变更、中断、终止】</p>
+        <p _v-af1df450="">17.1 WoodPecker 移动安全平台可能会对服务内容进行变更，也可能会中断、中止或终止服务。</p>
+        <p _v-af1df450=""><b _v-af1df450="">17.2您理解并同意，WoodPecker 移动安全平台有权自主决定经营策略。在WoodPecker 移动安全平台
+            发生合并、分立、收购、资产转让时，WoodPecker 移动安全平台可向第三方转让本服务下相关资产、数据；WoodPecker
+            移动安全平台也可在单方通知您后，将本协议下部分或全部服务转交由第三方运营或履行。具体受让主体以WoodPecker 移动安全平台通知的为准。</b></p>
+        <p _v-af1df450=""><b _v-af1df450="">17.3如发生下列任何一种情形，WoodPecker 移动安全平台有权不经通知而中断或终止向您提供的服务：</b></p><b
+            _v-af1df450=""> <b _v-af1df450="">（1）根据法律规定您应提交真实信息，而您提供的个人资料不真实、或与注册时信息不一致又未能提供合理证明；<br _v-af1df450="">
+        （2）您违反相关法律法规或本协议的约定；<br _v-af1df450=""> （3）按照法律规定或主管部门的要求；<br _v-af1df450=""> （4）出于安全的原因或其他必要的情形。</b>
+        <p _v-af1df450=""><b _v-af1df450="">17.4 WoodPecker 移动安全平台有权按本协议9.2条的约定进行收费。若您未按时足额付费，WoodPecker
+            移动安全平台有权中断、中止或终止提供服务。</b></p>
+        <p _v-af1df450=""><b _v-af1df450="">17.5您有责任自行备份存储在本服务中的数据。如果您的服务被终止，WoodPecker
+            移动安全平台可以从服务器上永久地删除您的数据,但法律法规另有规定的除外。服务终止后，WoodPecker 移动安全平台没有义务向您返还数据。</b></p>
+        <p _v-af1df450="">十八、【管辖与法律适用】</p>
+        <p _v-af1df450=""><b _v-af1df450="">18.1本协议签订地为中华人民共和国上海市闵行区。</b></p>
+        <p _v-af1df450=""><b _v-af1df450="">18.2本协议的成立、生效、履行、解释及纠纷解决，适用中华人民共和国大陆地区法律（不包括冲突法）。</b></p>
+        <p _v-af1df450=""><b _v-af1df450="">18.3若您和WoodPecker
+            移动安全平台之间发生任何纠纷或争议，首先应友好协商解决；协商不成的，您同意将纠纷或争议提交本协议签订地有管辖权的人民法院管辖。</b></p>
+        <p _v-af1df450="">18.4本协议所有条款的标题仅为阅读方便，本身并无实际涵义，不能作为本协议涵义解释的依据。</p>
+        <p _v-af1df450="">18.5本协议条款无论因何种原因部分无效或不可执行，其余条款仍有效，对双方具有约束力。</p>
+        <p _v-af1df450="">十九、【未成年人使用条款】</p>
+        <p _v-af1df450="">19.1若用户未满18周岁，则为未成年人，应在监护人监护、指导下阅读本协议和使用本服务。</p>
+        <p _v-af1df450="">
+            19.2未成年人用户涉世未深，容易被网络虚象迷惑，且好奇心强，遇事缺乏随机应变的处理能力，很容易被别有用心的人利用而又缺乏自我保护能力。因此，未成年人用户在使用本服务时应注意以下事项，提高安全意识，加强自我保护：</p>
+        （1）认清网络世界与现实世界的区别，避免沉迷于网络，影响日常的学习生活；<br _v-af1df450=""> （2）填写个人资料时，加强个人保护意识，以免不良分子对个人生活造成骚扰；<br _v-af1df450="">
+        （3）在监护人或老师的指导下，学习正确使用网络；<br _v-af1df450=""> （4）避免陌生网友随意会面或参与联谊活动，以免不法分子有机可乘，危及自身安全。 <p _v-af1df450="">
+            19.3监护人、学校均应对未成年人使用本服务时多做引导。特别是家长应关心子女的成长，注意与子女的沟通，指导子女上网应该注意的安全问题，防患于未然。</p>
+        <p _v-af1df450="">二十、【保密条款】</p>
+        <p _v-af1df450="">20.1用户使用WoodPecker 移动安全平台提供的服务，即认可WoodPecker 移动安全平台所拥有的知识产权。应履行对WoodPecker
+            移动安全平台所提供服务涉及的知识产权的保密责任，未经WoodPecker 移动安全平台同意和授权不得擅自模仿、复制，提供相同或近似服务或有其他侵犯WoodPecker 移动安全平台知识产权的行为。</p>
+        <p _v-af1df450="">20.2用户在使用WoodPecker 移动安全平台服务过程中，对接触到的任何资料、数据、技术实现方法，以及监测结果交付物负有保密的责任。未经WoodPecker
+            移动安全平台同意，不得以任何方式向任何第三方提供或透露。</p></b></div>
+    <b _v-af1df450="">
+        <div class="text-c" _v-af1df450=""><span class="btn" _v-af1df450="" id="continue">同意并继续</span> &nbsp; <span class="btn"
+                                                                                                      _v-af1df450="" id="close">关闭</span>
+        </div>
+    </b></div>
+<b _v-af1df450=""> </b>
+<script type="text/javascript" src="../static\vendors.js?1e6dc1f88d38e0148b76"></script>
+<script type="text/javascript" src="../static\web/register.js?1e6dc1f88d38e0148b76"></script>
+<iframe id="blockbyte-bs-sidebar" class="notranslate" data-pos="left"></iframe>
+<div id="blockbyte-bs-indicator" class="blockbyte-bs-fullHeight blockbyte-bs-visible" data-pos="left"
+     style="width: 20px; height: 100%; top: 0%;">
+    <div><span></span></div>
+</div>
+
+</body>
+</html>

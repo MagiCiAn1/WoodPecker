@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="telephone=no" name="format-detection">
+    <title>检测报告</title>
+{#    <script src="/static/js/jquery.min.js"></script>#}
+{#    <script src="/static/bootstrap/js/bootstrap.js"></script>#}
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h3>{{ apk_info.app_name }}</h3>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            APK概述
+        </div>
+        {#            <div class="panel-body">#}
+        {#                #}
+        {#            </div>#}
+        <ul class="list-group">
+            <li class="list-group-item">
+                包名： {{ apk_info.package_name }}
+            </li>
+            <li class="list-group-item">
+                版本： {{ apk_info.app_version }}
+            </li>
+            <li class="list-group-item">
+                大小： {{ apk_info.apk_file_size }}
+            </li>
+            <li class="list-group-item">
+                MD5： {{ apk_info.md5 }}
+            </li>
+            <li class="list-group-item">
+                加固信息： {{ apk_info.wrapped }}
+            </li>
+            <li class="list-group-item">
+                上传时间： {{ apk_info.upload_time }}
+            </li>
+        </ul>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            签名信息
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                签名方式：{{ signature.version }}
+            </li>
+            <li class="list-group-item">
+                序列号: {{ signature.serial }}
+            </li>
+            <li class="list-group-item">
+                有效期: {{ signature.start_time }}
+                至 {{ signature.stop_time }}
+            </li>
+            <li class="list-group-item">
+                签名算法名称: {{ signature.algorithm }}
+            </li>
+            <li class="list-group-item">
+                所有者: {{ signature.subject }}
+            </li>
+            <li class="list-group-item">
+                发布者: {{ signature.issuer }}
+            </li>
+        </ul>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            权限
+        </div>
+        <ul class="list-group">
+            {% for per in permission.uses_permission %}
+                <li class="list-group-item">
+                    {{ per }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            可被导出的Receiver
+        </div>
+        <table class="table">
+            <th>名称</th>
+            <th>是否有风险</th>
+            {% for recevier in export.receiver %}
+                <tr>
+                    <td>{{ recevier }}</td>
+                    <td>是</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            可被导出的Activity
+        </div>
+        <table class="table">
+            <th>名称</th>
+            <th>是否有风险</th>
+            {% for activity in export.activity %}
+                <tr>
+                    <td>{{ activity }}</td>
+                    <td>是</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            可被导出的Provider
+        </div>
+        <table class="table">
+            <th>名称</th>
+            <th>是否有风险</th>
+            {% for provider in export.provider %}
+                <tr>
+                    <td>{{ provider }}</td>
+                    <td>是</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            可被导出的Service
+        </div>
+        <table class="table">
+            <th>名称</th>
+            <th>是否有风险</th>
+            {% for service in export.service %}
+                <tr>
+                    <td>{{ service }}</td>
+                    <td>是</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            漏洞详情
+        </div>
+        {% for bug in bugs %}
+        <div class="panel-body">
+            <div class="page-header">
+                <h5>{{ bug.name }}</h5>
+            </div>
+            <span class="label label-default">问题描述</span>
+            <p class="panel-body">
+                {{ bug.desc }}
+            </p>
+            <span class="label label-default">解决方法</span>
+            <p class="panel-body">
+                {{ bug.resolve }}
+            </p>
+            <span class="label label-default">问题列表</span>
+            <ul class="list-group">
+                {% for item in bug.result %}
+                <li class="list-group-item">
+                    {{ item }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>

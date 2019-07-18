@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="telephone=no" name="format-detection">
+    <title>最近扫描</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h3>最近扫描</h3>
+    </div>
+    <div class="panel panel-default">
+        <table class="table">
+            <th>名字</th>
+            <th>MD5</th>
+            <th>大小</th>
+            <th>修改时间</th>
+            <th></th>
+            <th></th>
+            {% for item in models %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.md5 }}</td>
+                    <td>{{ item.size }}</td>
+                    <td>{{ item.time }}</td>
+                    <td><a href="/download/{{ item.md5 }}/apk">下载APK</a></td>
+                    <td><a href="/download/{{ item.md5 }}/pdf">下载报告</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+</body>
+</html>

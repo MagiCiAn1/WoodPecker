@@ -1,0 +1,731 @@
+2019-04-08 21:16:07,453 - home.py - INFO - the file is valid..
+2019-04-08 21:16:07,487 - home.py - INFO - the file has been upload.
+2019-04-08 21:16:07,552 - type.py - INFO - get nametest.apk
+2019-04-08 21:16:07,552 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 13, in classify
+    android = AndroidAnalyzer(md5)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 16, in __init__
+    self.__apk = apk.APK(self.__apk_file_name)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\core\bytecodes\apk.py", line 173, in __init__
+    self.__raw = read(filename)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\util.py", line 18, in read
+    with open(filename, 'rb' if binary else 'r') as f:
+IOError: [Errno 2] No such file or directory: u'upload_file/54f0c2f56f140dfc6246ae67e96e291b.apk'
+2019-04-08 21:16:08,653 - base.py - WARNING - Not Found: /favicon.ico
+2019-04-08 21:21:03,124 - home.py - INFO - the file is valid..
+2019-04-08 21:21:03,132 - home.py - INFO - the file has been upload.
+2019-04-08 21:21:03,157 - type.py - INFO - get nametest.apk
+2019-04-08 21:22:33,963 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 9, in classify
+    logging.info("get name" + request.POST.get('name'))
+TypeError: cannot concatenate 'str' and 'NoneType' objects
+2019-04-08 21:23:11,921 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 13, in classify
+    android = AndroidAnalyzer(md5)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 16, in __init__
+    self.__apk = apk.APK(self.__apk_file_name)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\core\bytecodes\apk.py", line 173, in __init__
+    self.__raw = read(filename)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\util.py", line 18, in read
+    with open(filename, 'rb' if binary else 'r') as f:
+IOError: [Errno 2] No such file or directory: u'upload_file/54f0c2f56f140dfc6246ae67e96e291b.apk'
+2019-04-08 21:25:50,897 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 13, in classify
+    android = AndroidAnalyzer(md5)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 16, in __init__
+    self.__apk = apk.APK(self.__apk_file_name)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\core\bytecodes\apk.py", line 173, in __init__
+    self.__raw = read(filename)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\util.py", line 18, in read
+    with open(filename, 'rb' if binary else 'r') as f:
+IOError: [Errno 2] No such file or directory: 'upload_file/54f0c2f56f140dfc6246ae67e96e291b.apk'
+2019-04-08 21:26:06,825 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 13, in classify
+    android = AndroidAnalyzer(md5)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 16, in __init__
+    self.__apk = apk.APK(self.__apk_file_name)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\core\bytecodes\apk.py", line 173, in __init__
+    self.__raw = read(filename)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\util.py", line 18, in read
+    with open(filename, 'rb' if binary else 'r') as f:
+IOError: [Errno 2] No such file or directory: 'upload_file/54f0c2f56f140dfc6246ae67e96e291b.apk'
+2019-04-08 21:28:32,460 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 13, in classify
+    android = AndroidAnalyzer(md5)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 16, in __init__
+    self.__apk = apk.APK(self.__apk_file_name)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\core\bytecodes\apk.py", line 175, in __init__
+    self.__raw = read(filename)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\util.py", line 18, in read
+    with open(filename, 'rb' if binary else 'r') as f:
+IOError: [Errno 2] No such file or directory: 'upload_file/54f0c2f56f140dfc6246ae67e96e291b.apk'
+2019-04-08 21:28:47,263 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 13, in classify
+    android = AndroidAnalyzer(md5)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 16, in __init__
+    self.__apk = apk.APK(self.__apk_file_name)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\core\bytecodes\apk.py", line 175, in __init__
+    self.__raw = read(filename)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\util.py", line 18, in read
+    with open(filename, 'rb' if binary else 'r') as f:
+IOError: [Errno 2] No such file or directory: 'upload_file/54f0c2f56f140dfc6246ae67e96e291b.apk'
+2019-04-08 21:31:33,332 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 13, in classify
+    android = AndroidAnalyzer(md5)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 16, in __init__
+    self.__apk = apk.APK(self.__apk_file_name)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\core\bytecodes\apk.py", line 175, in __init__
+    self.zipmodule = zipmodule
+  File "D:\GraduationProject\WoodPecker\tools/androguard\util.py", line 18, in read
+    with open(filename, 'rb' if binary else 'r') as f:
+IOError: [Errno 2] No such file or directory: 'D:\\GraduationProject\\WoodPeckerupload_file/54f0c2f56f140dfc6246ae67e96e291b.apk'
+2019-04-08 21:33:38,552 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 13, in classify
+    android = AndroidAnalyzer(md5)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 18, in __init__
+    self.__apk = apk.APK(self.__apk_file_name)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\core\bytecodes\apk.py", line 184, in __init__
+    self.zip = zipfile.ZipFile(StringIO.StringIO(self.__raw), mode=mode)
+  File "C:\Python27\lib\zipfile.py", line 770, in __init__
+    self._RealGetContents()
+  File "C:\Python27\lib\zipfile.py", line 842, in _RealGetContents
+    raise BadZipfile("Bad magic number for central directory")
+BadZipfile: Bad magic number for central directory
+2019-04-08 21:34:30,772 - base.py - WARNING - Not Found: /
+2019-04-08 21:34:42,565 - home.py - INFO - the file is valid..
+2019-04-08 21:34:42,575 - home.py - INFO - the file is first upload.we are should saved it.
+2019-04-08 21:34:42,575 - home.py - INFO - the file will be saved at D:\GraduationProject\WoodPecker\upload_file\3938222f4119d4329e9a7b385cf76041.apk
+2019-04-08 21:34:42,716 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 13, in classify
+    android = AndroidAnalyzer(md5)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 18, in __init__
+    self.__apk = apk.APK(self.__apk_file_name)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\core\bytecodes\apk.py", line 184, in __init__
+    self.zip = zipfile.ZipFile(StringIO.StringIO(self.__raw), mode=mode)
+  File "C:\Python27\lib\zipfile.py", line 770, in __init__
+    self._RealGetContents()
+  File "C:\Python27\lib\zipfile.py", line 842, in _RealGetContents
+    raise BadZipfile("Bad magic number for central directory")
+BadZipfile: Bad magic number for central directory
+2019-04-08 21:49:08,023 - home.py - INFO - the file is valid..
+2019-04-08 21:49:08,040 - home.py - INFO - the file has been upload.
+2019-04-08 21:49:08,128 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 13, in classify
+    android = AndroidAnalyzer(md5)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 18, in __init__
+    self.__apk = apk.APK(self.__apk_file_name)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\core\bytecodes\apk.py", line 173, in __init__
+    self.__raw = read(filename)
+  File "D:\GraduationProject\WoodPecker\tools/androguard\util.py", line 18, in read
+    with open(filename, 'rb' if binary else 'r') as f:
+IOError: [Errno 2] No such file or directory: 'D:\\GraduationProject\\WoodPecker\\upload_file\\3938222f4119d4329e9a7b385cf76041.apk'
+2019-04-08 21:51:09,434 - home.py - INFO - the file is valid..
+2019-04-08 21:51:09,444 - home.py - INFO - the file is first upload.we are should saved it.
+2019-04-08 21:51:09,444 - home.py - INFO - the file will be saved at D:\GraduationProject\WoodPecker\upload_file\3938222f4119d4329e9a7b385cf76041.apk
+2019-04-08 21:51:09,816 - static_analyzer.py - INFO - start analyze...
+2019-04-08 21:51:14,642 - static_analyzer.py - INFO - This is a debug test
+2019-04-08 21:56:23,145 - static_analyzer.py - INFO - start analyze...
+2019-04-08 21:56:23,153 - manifest_analyze.py - INFO - starting analyzer
+2019-04-08 21:56:23,188 - androconf.py - INFO - Skipping null padding in StringBlock header
+2019-04-08 21:56:23,204 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,207 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,207 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,210 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,210 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,211 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,213 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,213 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,213 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,213 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,213 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,213 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,213 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,213 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,213 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,213 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,214 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,214 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,214 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,217 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,217 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,217 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,217 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,219 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,219 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,219 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,219 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,219 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,219 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,219 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,220 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,220 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,220 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,220 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,220 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,221 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,221 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,221 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,221 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,223 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,223 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,223 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,223 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,223 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,223 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,223 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,224 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,224 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,224 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,226 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,226 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,226 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,226 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,226 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,226 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,227 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,227 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,227 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,229 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,229 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,229 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,230 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,230 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,230 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,230 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,230 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,230 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,230 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,232 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,232 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,232 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,233 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,233 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,233 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,233 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,234 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,234 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,236 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,236 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,236 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,237 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,237 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,237 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,239 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,239 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,239 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,240 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,240 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,243 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,244 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,246 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:23,246 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 21:56:25,690 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 14, in classify
+    android.start_analyze()
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 32, in start_analyze
+    manifest_analyze.get_signature()
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\manifest_analyze.py", line 65, in get_signature
+    data = subprocess.check_output(args)
+  File "C:\Python27\lib\subprocess.py", line 219, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['D:\\GraduationProject\\WoodPecker\\tools\\keytool', '-printcert', '-file', u'D:\\GraduationProject\\WoodPecker\\upload_file\\NETEASE.RSA']' returned non-zero exit status -1073741701
+2019-04-08 22:00:54,142 - static_analyzer.py - INFO - start analyze...
+2019-04-08 22:00:54,148 - manifest_analyze.py - INFO - starting analyzer
+2019-04-08 22:00:54,312 - androconf.py - INFO - Skipping null padding in StringBlock header
+2019-04-08 22:00:54,381 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,391 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,394 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,397 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,400 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,404 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,410 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,411 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,411 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,411 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,413 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,413 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,414 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,414 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,414 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,414 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,415 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,417 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,417 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,417 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,418 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,418 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,421 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,421 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,423 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,423 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,423 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,424 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,424 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,424 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,426 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,427 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,428 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,430 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,430 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,431 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,431 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,433 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,433 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,434 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,434 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,436 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,436 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,437 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,437 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,438 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,440 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,440 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,441 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,443 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,443 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,444 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,446 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,447 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,447 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,447 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,448 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,450 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,451 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,453 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,454 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,456 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,457 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,457 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,459 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,460 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,460 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,461 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,461 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,463 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,463 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,464 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,466 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,466 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,467 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,469 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,470 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,470 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,470 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,471 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,473 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,473 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,474 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,476 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,476 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,479 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,480 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,480 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,499 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,502 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,505 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:54,512 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:00:55,019 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 14, in classify
+    android.start_analyze()
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 32, in start_analyze
+    manifest_analyze.get_signature()
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\manifest_analyze.py", line 65, in get_signature
+    data = subprocess.check_output(args)
+  File "C:\Python27\lib\subprocess.py", line 219, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['D:\\GraduationProject\\WoodPecker\\tools\\keytool', '-printcert', '-file', u'D:\\GraduationProject\\WoodPecker\\upload_file\\NETEASE.RSA']' returned non-zero exit status 2
+2019-04-08 22:01:25,532 - home.py - INFO - the file is valid..
+2019-04-08 22:01:25,545 - home.py - INFO - the file has been upload.
+2019-04-08 22:01:25,707 - static_analyzer.py - INFO - start analyze...
+2019-04-08 22:01:25,713 - manifest_analyze.py - INFO - starting analyzer
+2019-04-08 22:01:25,865 - androconf.py - INFO - Skipping null padding in StringBlock header
+2019-04-08 22:01:25,934 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,941 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,944 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,947 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,953 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,956 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,959 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,961 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,963 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,963 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,963 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,964 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,966 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,966 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,967 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,967 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,969 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,970 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,970 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,971 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,971 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,973 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,974 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,976 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,976 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,976 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,976 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,976 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,977 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,977 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,979 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,982 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,983 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,984 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,986 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,987 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,990 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,990 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,993 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,993 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,996 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,996 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,996 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:25,997 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,000 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,000 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,002 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,003 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,003 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,005 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,006 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,006 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,007 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,009 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,009 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,010 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,012 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,013 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,013 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,013 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,015 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,016 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,016 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,017 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,019 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,020 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,020 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,022 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,023 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,023 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,025 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,026 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,026 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,029 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,029 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,030 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,032 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,033 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,035 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,036 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,038 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,039 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,039 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,040 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,042 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,042 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,043 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,045 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,058 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,059 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,062 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,068 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:01:26,364 - exception.py - ERROR - Internal Server Error: /analyzer/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\type.py", line 14, in classify
+    android.start_analyze()
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\static_analyzer.py", line 32, in start_analyze
+    manifest_analyze.get_signature()
+  File "D:\GraduationProject\WoodPecker\StaticAnalyzer\views\android\manifest_analyze.py", line 65, in get_signature
+    data = subprocess.check_output(args)
+  File "C:\Python27\lib\subprocess.py", line 219, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['D:\\GraduationProject\\WoodPecker\\tools\\keytool', '-printcert', '-file', u'D:\\GraduationProject\\WoodPecker\\upload_file\\NETEASE.RSA']' returned non-zero exit status 2
+2019-04-08 22:20:49,371 - static_analyzer.py - INFO - start analyze...
+2019-04-08 22:20:49,391 - manifest_analyze.py - INFO - starting analyzer
+2019-04-08 22:20:49,463 - androconf.py - INFO - Skipping null padding in StringBlock header
+2019-04-08 22:20:49,493 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,496 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,496 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,499 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,505 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,506 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,509 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,510 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,512 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,513 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,513 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,515 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,516 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,516 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,517 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,519 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,519 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,520 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,520 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,523 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,525 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,526 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,526 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,528 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,528 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,528 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,528 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,528 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,529 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,529 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,529 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,529 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,529 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,530 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,530 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,532 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,532 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,532 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,532 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,535 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,535 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,535 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,536 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,536 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,536 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,536 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,538 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,538 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,539 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,539 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,539 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,539 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,540 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,540 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,542 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,542 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,542 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,542 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,543 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,545 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,545 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,545 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,546 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,546 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,546 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,546 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,546 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,546 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,548 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,548 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,549 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,551 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,552 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,552 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,553 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,555 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,555 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,555 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,556 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,556 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,556 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,558 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,558 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,558 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,559 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,559 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,559 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,559 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,565 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,565 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,566 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:20:49,569 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,759 - static_analyzer.py - INFO - start analyze...
+2019-04-08 22:31:11,766 - manifest_analyze.py - INFO - starting analyzer
+2019-04-08 22:31:11,809 - androconf.py - INFO - Skipping null padding in StringBlock header
+2019-04-08 22:31:11,825 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,828 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,828 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,829 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,831 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,832 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,832 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,834 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,834 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,834 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,834 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,835 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,835 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,835 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,835 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,835 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,835 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,835 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,835 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,838 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,838 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,838 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,838 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,838 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,838 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,838 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,839 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,839 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,839 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,839 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,839 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,841 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,841 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,842 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,842 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,842 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,844 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,844 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,844 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,845 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,845 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,845 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,845 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,845 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,845 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,845 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,846 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,846 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,846 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,848 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,848 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,848 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,848 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,848 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,848 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,849 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,849 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,851 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,851 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,851 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,851 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,851 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,851 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,852 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,852 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,852 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,854 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,854 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,854 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,855 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,855 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,855 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,855 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,855 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,855 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,857 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,857 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,857 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,857 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,858 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,858 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,858 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,858 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,859 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,859 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,859 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,859 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,861 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,865 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,865 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,867 - androconf.py - INFO - Skipping padding bytes!
+2019-04-08 22:31:11,868 - androconf.py - INFO - Skipping padding bytes!
